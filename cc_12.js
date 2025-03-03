@@ -35,3 +35,21 @@ document.addEventListener("DOMContentLoaded", () => {
         card.style.backgroundColor = "#ce97fb" ;
     })
 }) ;
+
+
+// Task 3 - Implemented Dynamic Inventory List
+
+document.addEventListener("DOMContentLoaded", () => {
+    const inventoryList = document.getElementById("inventoryList") ;            // Grabbing inventoryList from HTML file
+
+    window.addInventoryItem = function(productName) {                           // Creation of the function to add and remove elements from inventory
+        const productItem = document.createElement("li") ;                      // li - list element
+        productItem.innerText = productName ;
+
+        inventoryList.appendChild(productItem) ;                                // Adding the element to the list by cliking buttons
+
+        productItem.addEventListener("click", () => {                           // Listens for a click on the element to eliminate it from the list
+            inventoryList.removeChild(productItem) ;
+        }) ;
+    } ;
+}) ;
