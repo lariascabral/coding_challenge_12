@@ -26,3 +26,12 @@ document.addEventListener("DOMContentLoaded", () => {
 }) ;
 
 
+// Task 2 - Updated Metric Cards via Array Conversion
+
+document.addEventListener("DOMContentLoaded", () => {
+    const metricCards = document.querySelectorAll(".metric-card") ;             // Using querySelectorAll so all cards made are edited by the premises
+    Array.from(metricCards).forEach(card => {                                   // For each card in the group, apply the following settings in color and text
+        card. innerHTML += "(Updated)" ;
+        card.style.backgroundColor = "#ce97fb" ;
+    })
+}) ;
